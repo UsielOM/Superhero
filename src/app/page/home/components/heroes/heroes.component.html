@@ -1,0 +1,37 @@
+<p>heroes works!</p>
+<div class="container">
+
+    <!-- DOM -->
+    <!-- let nombre de la variable que contenga los datos de mi arreglo a utilizar o objeto   of  el arreglo a utilizar o objeto -->
+
+
+    <div class="row">
+        <div class="col-4 " *ngFor="let heroe of heroes; let i = index">
+            <div class="card">
+                <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre: {{heroe.nombre}}</h5>
+                    <p class="card-text" id="bioHero">Descripcion: {{heroe.bio}}</p>
+                    <p class="card-text" id="casa">Universo: {{heroe.casa}}</p>
+                    <p class="card-text" id="añoAparicion">Año de aparicion: {{heroe.aparicion}}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="d-grid gap-2">
+
+                        <button class="btn btn-outline-danger" (click)="verHero(i)"> ver mas...</button>
+                        <!-- <a [routerLink]="['/info', i]" class="btn btn-outline-primary">ver mas..</a> -->
+
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+
+
+    </div>
+    <br>
+
+
+
+</div>
